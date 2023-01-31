@@ -14,9 +14,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * MIT License
- * <p>
- * Copyright (c) 2019 chenmudu (陈晨)
- * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -27,9 +24,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
  *
- * @Author chenchen6
- * @Date: 2020/1/1 12:17
- * @Description: 定制化线程池.服务于I/O密集型。
+ * @author Ant
+ * @since 2023/1/30 19:34
  *
  * 关于线程池的其他属性你可以直接从当前线程池的父类{@link ThreadPoolExecutor}中获取：
  * {@link ThreadPoolExecutor#getQueue()}

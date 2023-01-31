@@ -3,16 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>apache-tomcat-8</artifactId>
-        <groupId>org.chenmudu</groupId>
-        <version>HanChengLoadStation-1</version>
+        <artifactId>apache-tomcat-8.5.49</artifactId>
+        <groupId>com.ant</groupId>
+        <version>Ant-1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <name>common-api</name>
 
-    <groupId>org.chenchen</groupId>
+    <groupId>com.ant</groupId>
     <artifactId>common-api</artifactId>
-    <version>FangZhiChengStation-1</version>
+    <version>Ant-1</version>
     <build>
         <plugins>
             <plugin>

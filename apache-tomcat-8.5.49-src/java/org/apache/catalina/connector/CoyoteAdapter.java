@@ -374,7 +374,7 @@ public class CoyoteAdapter implements Adapter {
                         connector.getService().getContainer().getPipeline().isAsyncSupported());
                 // Calling the container
                 /**
-                 * 调用Container的PipeLine。
+                 * 调用容器的service方法处理请求
                  * 从Adapter中通过Service去过去对应的Engine。
                  * fist -> xxx -> xxx ->xxx ->value ->basicValue.
                  * 调用{@link org.apache.catalina.core.StandardEngineValve#invoke}
@@ -382,6 +382,9 @@ public class CoyoteAdapter implements Adapter {
                 connector.getService().getContainer().getPipeline().getFirst().invoke(
                         request, response);
             }
+
+            // 如果是异步Servlet请求，仅仅设置一个标志，
+            // 否则说明是同步Servlet请求，就将响应数据刷到浏览器
             if (request.isAsync()) {
                 async = true;
                 ReadListener readListener = req.getReadListener();
@@ -460,6 +463,7 @@ public class CoyoteAdapter implements Adapter {
 
             req.getRequestProcessor().setWorkerThreadName(null);
 
+            //如果不是异步Servlet请求，就销毁Request对象和Response对象
             // Recycle the wrapper request and response
             if (!async) {
                 updateWrapperErrorCount(request, response);

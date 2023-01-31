@@ -13,8 +13,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * MIT License
  * <p>
- * Copyright (c) 2019 chenmudu (陈晨)
- * <p>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -24,13 +22,11 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
+ * </p>
  *
- * @Author chenchen6
- * @Date: 2020/1/1 18:38
- * @Description: 定制化线程池的定制化任务队列。
- *                目标：修改JDK线程池的入队逻辑。
- */
-
+ * @author Ant
+ * @since 2023/1/30 19:31
+ **/
 @Data
 public class CustomizableTaskQueue extends LinkedBlockingQueue<Runnable> {
 
